@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <% @cocktail.ingredients.each do |ingredient| %>
+  <h3><%= ingredient.name %>: <%= ingredient.dose.description%> of </h3>
+  <% end %>
+  <%= link_to "Back", cocktails_path, class: "btn btn-primary" %>
+  <%= link_to "Edit", edit_cocktail_path, class: "btn btn-warning" %>
+  <%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: { confirm: "R U sure?" }, class: "btn btn-danger" %>
+</div>
