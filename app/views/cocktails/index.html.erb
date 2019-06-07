@@ -6,10 +6,6 @@
     <div class="d-flex ">
       <% @cocktails.each do |cocktail| %>
       <!-- NEED SOME HELP HERE WITH THE linking to image -->
-      <div class="card cocktail-card" style="background-image: url('/../../assets/images/bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
-      <div class="card cocktail-card" style="background-image: url('/../assets/images/bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
-      <div class="card cocktail-card" style="background-image: url('<%= image_path(cocktail.imgurl) %>/bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
-      <div class="card cocktail-card" style="background-image: <%= asset_path(cocktail.imgurl, image)%>('bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
       <div class="card cocktail-card" style="background-image: url('https://onepagelove.imgix.net/2019/05/005-Steve-Schoger.jpg?w=720&max-h=380&fit=crop&fp-y=0&auto=compress');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
       <% end %>
     </div>
