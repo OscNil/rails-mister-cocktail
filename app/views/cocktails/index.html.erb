@@ -1,8 +1,18 @@
-<div class="container">
-  <h1>Cocktails</h1>
-  <%= link_to "Create new cocktail", new_cocktail_path, class: "btn btn-primary" %>
-  <br><br>
-  <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %><br>
-  <% end %>
+<div class="content">
+  <div class="container">
+    <h1>Cocktails</h1>
+    <%= link_to "Create new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+    <br><br>
+    <div class="d-flex ">
+      <% @cocktails.each do |cocktail| %>
+      <!-- NEED SOME HELP HERE WITH THE linking to image -->
+      <div class="card cocktail-card" style="background-image: url('/../../assets/images/bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+      <div class="card cocktail-card" style="background-image: url('/../assets/images/bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+      <div class="card cocktail-card" style="background-image: url('<%= image_path(cocktail.imgurl) %>/bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+      <div class="card cocktail-card" style="background-image: <%= asset_path(cocktail.imgurl, image)%>('bee-lg.jpg');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+      <div class="card cocktail-card" style="background-image: url('https://onepagelove.imgix.net/2019/05/005-Steve-Schoger.jpg?w=720&max-h=380&fit=crop&fp-y=0&auto=compress');"><%= link_to cocktail.name, cocktail_path(cocktail) %></div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
