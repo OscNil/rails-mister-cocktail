@@ -12,4 +12,7 @@ Ingredient.create(name: "mint leaves")
 Ingredient.create(name: "gin")
 Ingredient.create(name: "malibu")
 Ingredient.create(name: "tonic")
+Ingredient.create(name: "buffalo worm powder")
+Ingredient.create(name: "cricket powder")
+Ingredient.create(name: "black widow powder")
 puts 'Seeding done'

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Edit drink: <%= @cocktail.name %></h1>
+  <h6>Only substances approved for ingestion, plox!</h6>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Save", class: "btn btn-success" %>
+  <% end %>
+</div>
