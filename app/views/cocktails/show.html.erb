@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
   <% @cocktail.doses.each do |dose| %>
     <h3><%= dose.description%>: <%= dose.ingredient.name %>
     <%= link_to "Remove ingredient", dose_path(dose),  method: :delete, data: { confirm: "R U sure?" }, class: "btn btn-danger" %></h3>
